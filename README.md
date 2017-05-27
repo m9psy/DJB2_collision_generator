@@ -16,7 +16,7 @@ No additional dependencies required.
 1. `target` - target hash value to collide
 2. `length` - length of the resulting collision string
 
-By default 32 length is used, which is very long string. For 32-bit `djb` 10 symbols will be more than enough and script will automatically increment length if there are not enough unique collisions left. Also generation speed depends on the length - I expect 1 collision complexity is O(n * 256 * r * c), where `r` - number of rounds, `c` -  is number of attempts. There may be infinite number of attempts, so worst case to generate 1 collision is pretty high (worst case is simply brute-force). Best case is O(256), average O(n * 256) `python generator.py 0 10` - generate 10 symbols strings for 0 hash value. Like this:
+By default 32 length is used, which is very long string. For 32-bit `djb` 10 symbols will be more than enough and script will automatically increment length if there are not enough unique collisions left. Also generation speed depends on the length - I expect 1 collision complexity is O(n * 256 * r * c), where `r` - number of rounds, `c` -  is number of attempts. Number of rounds typically = 1, and 10 in worst case. There may be infinite number of attempts, so worst case to generate 1 collision is pretty high (worst case is simply brute-force). Best case is O(256), average O(n * 256) `python generator.py 0 10` - generate 10 symbols strings for 0 hash value. Like this:
 
 ```
 b'\xe0\xcf^\xaa\x13L\xc1\x01\xe1\xa2'
