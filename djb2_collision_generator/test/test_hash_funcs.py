@@ -1,5 +1,7 @@
 # coding: utf8
 
+from __future__ import print_function
+
 """Values to test was generated with authentic C version from http://www.cse.yorku.ca/~oz/hash.html"""
 
 from djb2_collision_generator.hash_functions import djb2_32, djb2_64

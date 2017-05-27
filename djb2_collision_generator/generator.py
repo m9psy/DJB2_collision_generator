@@ -1,5 +1,7 @@
 # coding: utf-8
 
+from __future__ import print_function
+
 import warnings
 import random
 import copy
@@ -7,7 +9,7 @@ import time
 import sys
 
 # For console mode
-from hash_functions import djb2_32, djb2_64
+from .hash_functions import djb2_32, djb2_64
 
 
 class GreedyGenerator:
